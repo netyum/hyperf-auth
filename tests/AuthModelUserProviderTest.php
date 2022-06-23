@@ -11,10 +11,10 @@ declare(strict_types=1);
 namespace HyperfTest;
 
 use Hyperf\Database\Model\Model;
-use HyperfExt\Auth\Contracts\AuthenticatableInterface;
-use HyperfExt\Auth\UserProviders\ModelUserProvider;
-use HyperfExt\Hashing\Contract\DriverInterface;
-use HyperfExt\Hashing\Contract\HashInterface;
+use Hyperf\Auth\Contracts\AuthenticatableInterface;
+use Hyperf\Auth\UserProviders\ModelUserProvider;
+use Hyperf\Hashing\Contract\DriverInterface;
+use Hyperf\Hashing\Contract\HashInterface;
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
 

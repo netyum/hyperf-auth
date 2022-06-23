@@ -8,13 +8,13 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth\Guards;
+namespace Hyperf\Auth\Guards;
 
 use Hyperf\Utils\Str;
-use HyperfExt\Auth\Contracts\AuthenticatableInterface;
-use HyperfExt\Auth\Contracts\GuardInterface;
-use HyperfExt\Auth\Contracts\UserProviderInterface;
-use HyperfExt\Auth\GuardHelpers;
+use Hyperf\Auth\Contracts\AuthenticatableInterface;
+use Hyperf\Auth\Contracts\GuardInterface;
+use Hyperf\Auth\Contracts\UserProviderInterface;
+use Hyperf\Auth\GuardHelpers;
 use Psr\Http\Message\ServerRequestInterface;
 
 class TokenGuard implements GuardInterface

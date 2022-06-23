@@ -8,27 +8,27 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth\Access;
+namespace Hyperf\Auth\Access;
 
 use Hyperf\Contract\ConfigInterface;
 use Hyperf\Di\Annotation\AnnotationCollector;
-use HyperfExt\Auth\Annotations\Policy;
-use HyperfExt\Auth\Contracts\Access\GateManagerInterface;
-use HyperfExt\Auth\Contracts\AuthManagerInterface;
-use HyperfExt\Auth\Events\GateManagerResolved;
+use Hyperf\Auth\Annotations\Policy;
+use Hyperf\Auth\Contracts\Access\GateManagerInterface;
+use Hyperf\Auth\Contracts\AuthManagerInterface;
+use Hyperf\Auth\Events\GateManagerResolved;
 use Psr\Container\ContainerInterface;
 use Psr\EventDispatcher\EventDispatcherInterface;
 
 /**
- * @method \HyperfExt\Auth\Contracts\Access\GateInterface define(string $ability, callable|string $callback)               Define a new ability.
- * @method \HyperfExt\Auth\Contracts\Access\GateInterface resource(string $name, string $class, ?array $abilities = null)  Define abilities for a resource.
- * @method \HyperfExt\Auth\Contracts\Access\GateInterface policy(string $class, string $policy)                            Define a policy class for a given class type.
- * @method \HyperfExt\Auth\Contracts\Access\GateInterface before(callable $callback)                                       Register a callback to run before all Gate checks.
- * @method \HyperfExt\Auth\Contracts\Access\GateInterface after(callable $callback)                                        Register a callback to run after all Gate checks.
- * @method \HyperfExt\Auth\Contracts\Access\GateInterface forUser(\HyperfExt\Auth\Contracts\AuthenticatableInterface $user) Get a guard instance for the given user.
- * @method \HyperfExt\Auth\Access\Response               authorize(string $ability, array|mixed $arguments = [])          Determine if the given ability should be granted for the current user.
- * @method \HyperfExt\Auth\Access\Response               inspect(string $ability, array|mixed $arguments = [])            Inspect the user for the given ability.
- * @method null|bool|\HyperfExt\Auth\Access\Response     raw(string $ability, array|mixed $arguments = [])                Get the raw result from the authorization callback.
+ * @method \Hyperf\Auth\Contracts\Access\GateInterface define(string $ability, callable|string $callback)               Define a new ability.
+ * @method \Hyperf\Auth\Contracts\Access\GateInterface resource(string $name, string $class, ?array $abilities = null)  Define abilities for a resource.
+ * @method \Hyperf\Auth\Contracts\Access\GateInterface policy(string $class, string $policy)                            Define a policy class for a given class type.
+ * @method \Hyperf\Auth\Contracts\Access\GateInterface before(callable $callback)                                       Register a callback to run before all Gate checks.
+ * @method \Hyperf\Auth\Contracts\Access\GateInterface after(callable $callback)                                        Register a callback to run after all Gate checks.
+ * @method \Hyperf\Auth\Contracts\Access\GateInterface forUser(\Hyperf\Auth\Contracts\AuthenticatableInterface $user) Get a guard instance for the given user.
+ * @method \Hyperf\Auth\Access\Response               authorize(string $ability, array|mixed $arguments = [])          Determine if the given ability should be granted for the current user.
+ * @method \Hyperf\Auth\Access\Response               inspect(string $ability, array|mixed $arguments = [])            Inspect the user for the given ability.
+ * @method null|bool|\Hyperf\Auth\Access\Response     raw(string $ability, array|mixed $arguments = [])                Get the raw result from the authorization callback.
  * @method mixed                                         getPolicyFor(object|string $class)                               Get a policy instance for a given class.
  * @method bool                                          has(string|string[] $ability)                                    Determine if a given ability has been defined.
  * @method bool                                          allows(string $ability, array|mixed $arguments = [])             Determine if the given ability should be granted for the current user.
@@ -71,7 +71,7 @@ class GateManager implements GateManagerInterface
     /**
      * The event dispatcher instance.
      *
-     * @var \HyperfExt\Auth\Contracts\AuthManagerInterface
+     * @var \Hyperf\Auth\Contracts\AuthManagerInterface
      */
     protected $auth;
 

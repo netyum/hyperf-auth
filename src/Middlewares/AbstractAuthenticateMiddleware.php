@@ -8,10 +8,10 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth\Middlewares;
+namespace Hyperf\Auth\Middlewares;
 
-use HyperfExt\Auth\Contracts\AuthManagerInterface;
-use HyperfExt\Auth\Exceptions\AuthenticationException;
+use Hyperf\Auth\Contracts\AuthManagerInterface;
+use Hyperf\Auth\Exceptions\AuthenticationException;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
@@ -22,7 +22,7 @@ abstract class AbstractAuthenticateMiddleware implements MiddlewareInterface
     /**
      * The authentication factory instance.
      *
-     * @var \HyperfExt\Auth\Contracts\AuthManagerInterface
+     * @var \Hyperf\Auth\Contracts\AuthManagerInterface
      */
     protected $auth;
 
@@ -36,7 +36,7 @@ abstract class AbstractAuthenticateMiddleware implements MiddlewareInterface
 
     /**
      * {@inheritdoc}
-     * @throws \HyperfExt\Auth\Exceptions\AuthenticationException
+     * @throws \Hyperf\Auth\Exceptions\AuthenticationException
      */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
@@ -47,7 +47,7 @@ abstract class AbstractAuthenticateMiddleware implements MiddlewareInterface
     /**
      * Determine if the user is logged in to any of the given guards.
      *
-     * @throws \HyperfExt\Auth\Exceptions\AuthenticationException
+     * @throws \Hyperf\Auth\Exceptions\AuthenticationException
      */
     protected function authenticate(ServerRequestInterface $request, array $guards): void
     {
@@ -68,7 +68,7 @@ abstract class AbstractAuthenticateMiddleware implements MiddlewareInterface
     /**
      * Handle an unauthenticated user.
      *
-     * @throws \HyperfExt\Auth\Exceptions\AuthenticationException
+     * @throws \Hyperf\Auth\Exceptions\AuthenticationException
      */
     protected function unauthenticated(ServerRequestInterface $request, array $guards): void
     {

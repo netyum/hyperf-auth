@@ -8,7 +8,7 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth\Contracts;
+namespace Hyperf\Auth\Contracts;
 
 interface StatefulGuardInterface extends GuardInterface
 {
@@ -26,7 +26,7 @@ interface StatefulGuardInterface extends GuardInterface
     /**
      * Log a user into the application.
      *
-     * @param \HyperfExt\Auth\Contracts\AuthenticatableInterface $user
+     * @param \Hyperf\Auth\Contracts\AuthenticatableInterface $user
      * @return mixed|void
      */
     public function login(AuthenticatableInterface $user, bool $remember = false);
@@ -36,7 +36,7 @@ interface StatefulGuardInterface extends GuardInterface
      *
      * @param mixed $id
      *
-     * @return \HyperfExt\Auth\Contracts\AuthenticatableInterface
+     * @return \Hyperf\Auth\Contracts\AuthenticatableInterface
      */
     public function loginUsingId($id, bool $remember = false): ?AuthenticatableInterface;
 
@@ -45,7 +45,7 @@ interface StatefulGuardInterface extends GuardInterface
      *
      * @param mixed $id
      *
-     * @return bool|\HyperfExt\Auth\Contracts\AuthenticatableInterface
+     * @return bool|\Hyperf\Auth\Contracts\AuthenticatableInterface
      */
     public function onceUsingId($id);
 

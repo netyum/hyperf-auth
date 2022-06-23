@@ -8,9 +8,9 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth;
+namespace Hyperf\Auth;
 
-use HyperfExt\Auth\Contracts\AuthenticatableInterface as UserContract;
+use Hyperf\Auth\Contracts\AuthenticatableInterface as UserContract;
 
 class GenericUser implements UserContract
 {

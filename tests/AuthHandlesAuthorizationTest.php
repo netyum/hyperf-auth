@@ -10,7 +10,7 @@ declare(strict_types=1);
  */
 namespace HyperfTest;
 
-use HyperfExt\Auth\Access\HandlesAuthorization;
+use Hyperf\Auth\Access\HandlesAuthorization;
 use PHPUnit\Framework\TestCase;
 
 /**

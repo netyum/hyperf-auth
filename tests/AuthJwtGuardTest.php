@@ -12,12 +12,12 @@ namespace HyperfTest;
 
 use Hyperf\HttpServer\Request;
 use Hyperf\Utils\Context;
-use HyperfExt\Auth\Contracts\AuthenticatableInterface;
-use HyperfExt\Auth\Contracts\UserProviderInterface;
-use HyperfExt\Auth\Guards\JwtGuard;
-use HyperfExt\Jwt\Contracts\JwtSubjectInterface;
-use HyperfExt\Jwt\Jwt;
-use HyperfExt\Jwt\JwtFactory;
+use Hyperf\Auth\Contracts\AuthenticatableInterface;
+use Hyperf\Auth\Contracts\UserProviderInterface;
+use Hyperf\Auth\Guards\JwtGuard;
+use Hyperf\Jwt\Contracts\JwtSubjectInterface;
+use Hyperf\Jwt\Jwt;
+use Hyperf\Jwt\JwtFactory;
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;

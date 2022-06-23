@@ -8,11 +8,11 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth\Access;
+namespace Hyperf\Auth\Access;
 
 use Hyperf\Utils\ApplicationContext;
-use HyperfExt\Auth\Contracts\Access\GateManagerInterface;
-use HyperfExt\Auth\Contracts\AuthenticatableInterface;
+use Hyperf\Auth\Contracts\Access\GateManagerInterface;
+use Hyperf\Auth\Contracts\AuthenticatableInterface;
 
 trait AuthorizesRequests
 {
@@ -21,8 +21,8 @@ trait AuthorizesRequests
      *
      * @param mixed $ability
      * @param array|mixed $arguments
-     * @throws \HyperfExt\Auth\Exceptions\AuthorizationException
-     * @return \HyperfExt\Auth\Access\Response
+     * @throws \Hyperf\Auth\Exceptions\AuthorizationException
+     * @return \Hyperf\Auth\Access\Response
      */
     public function authorize($ability, $arguments = [])
     {
@@ -38,8 +38,8 @@ trait AuthorizesRequests
      *
      * @param mixed $ability
      * @param array|mixed $arguments
-     * @throws \HyperfExt\Auth\Exceptions\AuthorizationException
-     * @return \HyperfExt\Auth\Access\Response
+     * @throws \Hyperf\Auth\Exceptions\AuthorizationException
+     * @return \Hyperf\Auth\Access\Response
      */
     public function authorizeForUser(AuthenticatableInterface $user, $ability, $arguments = [])
     {

@@ -10,8 +10,8 @@ declare(strict_types=1);
  */
 namespace %NAMESPACE%;
 
-use HyperfExt\Auth\Access\HandlesAuthorization;
-use HyperfExt\Auth\Annotation\Policy;
+use Hyperf\Auth\Access\HandlesAuthorization;
+use Hyperf\Auth\Annotation\Policy;
 %USES%
 
 /**
@@ -24,7 +24,7 @@ class %CLASS%
     /**
      * Determine whether the user can view any models.
      *
-     * @return bool|\HyperfExt\Auth\Access\Response
+     * @return bool|\Hyperf\Auth\Access\Response
      */
     public function viewAny(%USER_MODEL% $user)
     {
@@ -34,7 +34,7 @@ class %CLASS%
     /**
      * Determine whether the user can view the model.
      *
-     * @return bool|\HyperfExt\Auth\Access\Response
+     * @return bool|\Hyperf\Auth\Access\Response
      */
     public function view(%USER_MODEL% $user, %MODEL% $%MODEL_VARIABLE%)
     {
@@ -44,7 +44,7 @@ class %CLASS%
     /**
      * Determine whether the user can create models.
      *
-     * @return bool|\HyperfExt\Auth\Access\Response
+     * @return bool|\Hyperf\Auth\Access\Response
      */
     public function create(%USER_MODEL% $user)
     {
@@ -54,7 +54,7 @@ class %CLASS%
     /**
      * Determine whether the user can update the model.
      *
-     * @return bool|\HyperfExt\Auth\Access\Response
+     * @return bool|\Hyperf\Auth\Access\Response
      */
     public function update(%USER_MODEL% $user, %MODEL% $%MODEL_VARIABLE%)
     {
@@ -64,7 +64,7 @@ class %CLASS%
     /**
      * Determine whether the user can delete the model.
      *
-     * @return bool|\HyperfExt\Auth\Access\Response
+     * @return bool|\Hyperf\Auth\Access\Response
      */
     public function delete(%USER_MODEL% $user, %MODEL% $%MODEL_VARIABLE%)
     {
@@ -74,7 +74,7 @@ class %CLASS%
     /**
      * Determine whether the user can restore the model.
      *
-     * @return bool|\HyperfExt\Auth\Access\Response
+     * @return bool|\Hyperf\Auth\Access\Response
      */
     public function restore(%USER_MODEL% $user, %MODEL% $%MODEL_VARIABLE%)
     {
@@ -84,7 +84,7 @@ class %CLASS%
     /**
      * Determine whether the user can permanently delete the model.
      *
-     * @return bool|\HyperfExt\Auth\Access\Response
+     * @return bool|\Hyperf\Auth\Access\Response
      */
     public function forceDelete(%USER_MODEL% $user, %MODEL% $%MODEL_VARIABLE%)
     {

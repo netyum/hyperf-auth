@@ -8,17 +8,17 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth\Passwords;
+namespace Hyperf\Auth\Passwords;
 
 use Carbon\Carbon;
 use Hyperf\Database\ConnectionInterface;
 use Hyperf\Database\ConnectionResolverInterface;
 use Hyperf\Database\Query\Builder;
 use Hyperf\DbConnection\Connection;
-use HyperfExt\Auth\Contracts\CanResetPasswordInterface;
-use HyperfExt\Auth\Contracts\TokenRepositoryInterface;
-use HyperfExt\Hashing\Contract\DriverInterface as HasherInterface;
-use HyperfExt\Hashing\Contract\HashInterface;
+use Hyperf\Auth\Contracts\CanResetPasswordInterface;
+use Hyperf\Auth\Contracts\TokenRepositoryInterface;
+use Hyperf\Hashing\Contract\DriverInterface as HasherInterface;
+use Hyperf\Hashing\Contract\HashInterface;
 
 class DatabaseTokenRepository implements TokenRepositoryInterface
 {
@@ -32,7 +32,7 @@ class DatabaseTokenRepository implements TokenRepositoryInterface
     /**
      * The Hasher implementation.
      *
-     * @var \HyperfExt\Hashing\Contract\DriverInterface
+     * @var \Hyperf\Hashing\Contract\DriverInterface
      */
     protected $hasher;
 

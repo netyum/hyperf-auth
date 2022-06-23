@@ -11,11 +11,11 @@ declare(strict_types=1);
 namespace HyperfTest;
 
 use Hyperf\HttpServer\Request;
-use Hyperf\Utils\Context;
-use HyperfExt\Auth\Contracts\AuthenticatableInterface;
-use HyperfExt\Auth\Contracts\UserProviderInterface;
-use HyperfExt\Auth\Guards\TokenGuard;
-use HyperfExt\Jwt\Contracts\JwtSubjectInterface;
+use Hyperf\Context\Context;
+use Hyperf\Auth\Contracts\AuthenticatableInterface;
+use Hyperf\Auth\Contracts\UserProviderInterface;
+use Hyperf\Auth\Guards\TokenGuard;
+use Hyperf\Jwt\Contracts\JwtSubjectInterface;
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ServerRequestInterface;

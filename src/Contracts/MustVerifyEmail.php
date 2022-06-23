@@ -8,7 +8,7 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth\Contracts;
+namespace Hyperf\Auth\Contracts;
 
 /**
  * @todo 移植 illuminate 相关组件以实现功能特性

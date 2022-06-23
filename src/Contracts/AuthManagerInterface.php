@@ -8,14 +8,14 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth\Contracts;
+namespace Hyperf\Auth\Contracts;
 
 interface AuthManagerInterface
 {
     /**
      * Get a guard instance by name.
      *
-     * @return \HyperfExt\Auth\Contracts\GuardInterface|\HyperfExt\Auth\Contracts\StatefulGuardInterface|\HyperfExt\Auth\Contracts\StatelessGuardInterface
+     * @return \Hyperf\Auth\Contracts\GuardInterface|\Hyperf\Auth\Contracts\StatefulGuardInterface|\Hyperf\Auth\Contracts\StatelessGuardInterface
      */
     public function guard(?string $name = null): GuardInterface;
 

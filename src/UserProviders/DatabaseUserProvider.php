@@ -8,17 +8,17 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth\UserProviders;
+namespace Hyperf\Auth\UserProviders;
 
 use Hyperf\Database\ConnectionInterface;
 use Hyperf\Database\ConnectionResolverInterface;
 use Hyperf\Utils\Contracts\Arrayable;
 use Hyperf\Utils\Str;
-use HyperfExt\Auth\Contracts\AuthenticatableInterface;
-use HyperfExt\Auth\Contracts\UserProviderInterface;
-use HyperfExt\Auth\GenericUser;
-use HyperfExt\Hashing\Contract\DriverInterface as HasherInterface;
-use HyperfExt\Hashing\Contract\HashInterface;
+use Hyperf\Auth\Contracts\AuthenticatableInterface;
+use Hyperf\Auth\Contracts\UserProviderInterface;
+use Hyperf\Auth\GenericUser;
+use Hyperf\Hashing\Contract\DriverInterface as HasherInterface;
+use Hyperf\Hashing\Contract\HashInterface;
 
 class DatabaseUserProvider implements UserProviderInterface
 {
@@ -32,7 +32,7 @@ class DatabaseUserProvider implements UserProviderInterface
     /**
      * The hasher implementation.
      *
-     * @var \HyperfExt\Hashing\Contract\HashInterface
+     * @var \Hyperf\Hashing\Contract\HashInterface
      */
     protected $hasher;
 

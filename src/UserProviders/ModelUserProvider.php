@@ -8,21 +8,21 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth\UserProviders;
+namespace Hyperf\Auth\UserProviders;
 
 use Hyperf\Utils\Contracts\Arrayable;
 use Hyperf\Utils\Str;
-use HyperfExt\Auth\Contracts\AuthenticatableInterface;
-use HyperfExt\Auth\Contracts\UserProviderInterface;
-use HyperfExt\Hashing\Contract\DriverInterface as HasherInterface;
-use HyperfExt\Hashing\Contract\HashInterface;
+use Hyperf\Auth\Contracts\AuthenticatableInterface;
+use Hyperf\Auth\Contracts\UserProviderInterface;
+use Hyperf\Hashing\Contract\DriverInterface as HasherInterface;
+use Hyperf\Hashing\Contract\HashInterface;
 
 class ModelUserProvider implements UserProviderInterface
 {
     /**
      * The hasher implementation.
      *
-     * @var \HyperfExt\Hashing\Contract\HashInterface
+     * @var \Hyperf\Hashing\Contract\HashInterface
      */
     protected $hasher;
 
@@ -49,7 +49,7 @@ class ModelUserProvider implements UserProviderInterface
      *
      * @param mixed $identifier
      *
-     * @return null|\Hyperf\Database\Model\Model|\HyperfExt\Auth\Contracts\AuthenticatableInterface
+     * @return null|\Hyperf\Database\Model\Model|\Hyperf\Auth\Contracts\AuthenticatableInterface
      */
     public function retrieveById($identifier): ?AuthenticatableInterface
     {
@@ -65,7 +65,7 @@ class ModelUserProvider implements UserProviderInterface
      *
      * @param mixed $identifier
      *
-     * @return null|\Hyperf\Database\Model\Model|\HyperfExt\Auth\Contracts\AuthenticatableInterface
+     * @return null|\Hyperf\Database\Model\Model|\Hyperf\Auth\Contracts\AuthenticatableInterface
      */
     public function retrieveByToken($identifier, string $token): ?AuthenticatableInterface
     {
@@ -89,7 +89,7 @@ class ModelUserProvider implements UserProviderInterface
     /**
      * Update the "remember me" token for the given user in storage.
      *
-     * @param \Hyperf\Database\Model\Model|\HyperfExt\Auth\Contracts\AuthenticatableInterface $user
+     * @param \Hyperf\Database\Model\Model|\Hyperf\Auth\Contracts\AuthenticatableInterface $user
      */
     public function updateRememberToken(AuthenticatableInterface $user, string $token): void
     {
@@ -107,7 +107,7 @@ class ModelUserProvider implements UserProviderInterface
     /**
      * Retrieve a user by the given credentials.
      *
-     * @return null|\Hyperf\Database\Model\Model|\HyperfExt\Auth\Contracts\AuthenticatableInterface
+     * @return null|\Hyperf\Database\Model\Model|\Hyperf\Auth\Contracts\AuthenticatableInterface
      */
     public function retrieveByCredentials(array $credentials): ?AuthenticatableInterface
     {
@@ -150,7 +150,7 @@ class ModelUserProvider implements UserProviderInterface
     /**
      * Create a new instance of the model.
      *
-     * @return null|\Hyperf\Database\Model\Model|\HyperfExt\Auth\Contracts\AuthenticatableInterface
+     * @return null|\Hyperf\Database\Model\Model|\Hyperf\Auth\Contracts\AuthenticatableInterface
      */
     public function createModel()
     {
@@ -213,7 +213,7 @@ class ModelUserProvider implements UserProviderInterface
     /**
      * Get a new query builder for the model instance.
      *
-     * @param null|\Hyperf\Database\Model\Model|\HyperfExt\Auth\Contracts\AuthenticatableInterface $model
+     * @param null|\Hyperf\Database\Model\Model|\Hyperf\Auth\Contracts\AuthenticatableInterface $model
      * @return \Hyperf\Database\Model\Builder
      */
     protected function newModelQuery($model = null)

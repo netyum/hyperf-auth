@@ -8,7 +8,7 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth\Contracts;
+namespace Hyperf\Auth\Contracts;
 
 interface UserProviderInterface
 {
@@ -17,7 +17,7 @@ interface UserProviderInterface
      *
      * @param mixed $identifier
      *
-     * @return null|\HyperfExt\Auth\Contracts\AuthenticatableInterface
+     * @return null|\Hyperf\Auth\Contracts\AuthenticatableInterface
      */
     public function retrieveById($identifier): ?AuthenticatableInterface;
 
@@ -26,28 +26,28 @@ interface UserProviderInterface
      *
      * @param mixed $identifier
      *
-     * @return null|\HyperfExt\Auth\Contracts\AuthenticatableInterface
+     * @return null|\Hyperf\Auth\Contracts\AuthenticatableInterface
      */
     public function retrieveByToken($identifier, string $token): ?AuthenticatableInterface;
 
     /**
      * Update the "remember me" token for the given user in storage.
      *
-     * @param \HyperfExt\Auth\Contracts\AuthenticatableInterface $user
+     * @param \Hyperf\Auth\Contracts\AuthenticatableInterface $user
      */
     public function updateRememberToken(AuthenticatableInterface $user, string $token): void;
 
     /**
      * Retrieve a user by the given credentials.
      *
-     * @return null|\HyperfExt\Auth\Contracts\AuthenticatableInterface
+     * @return null|\Hyperf\Auth\Contracts\AuthenticatableInterface
      */
     public function retrieveByCredentials(array $credentials): ?AuthenticatableInterface;
 
     /**
      * Validate a user against the given credentials.
      *
-     * @param \HyperfExt\Auth\Contracts\AuthenticatableInterface $user
+     * @param \Hyperf\Auth\Contracts\AuthenticatableInterface $user
      */
     public function validateCredentials(AuthenticatableInterface $user, array $credentials): bool;
 }

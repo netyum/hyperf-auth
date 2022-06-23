@@ -8,21 +8,21 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth\Guards;
+namespace Hyperf\Auth\Guards;
 
 use BadMethodCallException;
 use Hyperf\HttpServer\Contract\RequestInterface;
 use Hyperf\Utils\Traits\Macroable;
-use HyperfExt\Auth\Contracts\AuthenticatableInterface;
-use HyperfExt\Auth\Contracts\StatelessGuardInterface;
-use HyperfExt\Auth\Contracts\UserProviderInterface;
-use HyperfExt\Auth\EventHelpers;
-use HyperfExt\Auth\GuardHelpers;
-use HyperfExt\Jwt\Exceptions\JwtException;
-use HyperfExt\Jwt\Exceptions\UserNotDefinedException;
-use HyperfExt\Jwt\Jwt;
-use HyperfExt\Jwt\JwtFactory;
-use HyperfExt\Jwt\Payload;
+use Hyperf\Auth\Contracts\AuthenticatableInterface;
+use Hyperf\Auth\Contracts\StatelessGuardInterface;
+use Hyperf\Auth\Contracts\UserProviderInterface;
+use Hyperf\Auth\EventHelpers;
+use Hyperf\Auth\GuardHelpers;
+use Hyperf\Jwt\Exceptions\JwtException;
+use Hyperf\Jwt\Exceptions\UserNotDefinedException;
+use Hyperf\Jwt\Jwt;
+use Hyperf\Jwt\JwtFactory;
+use Hyperf\Jwt\Payload;
 use Psr\Container\ContainerInterface;
 use Psr\EventDispatcher\EventDispatcherInterface;
 
@@ -44,7 +44,7 @@ class JwtGuard implements StatelessGuardInterface
     /**
      * The user we last attempted to retrieve.
      *
-     * @var \HyperfExt\Auth\Contracts\AuthenticatableInterface
+     * @var \Hyperf\Auth\Contracts\AuthenticatableInterface
      */
     protected $lastAttempted;
 
@@ -54,7 +54,7 @@ class JwtGuard implements StatelessGuardInterface
     protected $container;
 
     /**
-     * @var \HyperfExt\Jwt\Jwt
+     * @var \Hyperf\Jwt\Jwt
      */
     protected $jwt;
 
@@ -128,7 +128,7 @@ class JwtGuard implements StatelessGuardInterface
     /**
      * Get the currently authenticated user or throws an exception.
      *
-     * @throws \HyperfExt\Jwt\Exceptions\UserNotDefinedException
+     * @throws \Hyperf\Jwt\Exceptions\UserNotDefinedException
      */
     public function userOrFail(): AuthenticatableInterface
     {
@@ -184,7 +184,7 @@ class JwtGuard implements StatelessGuardInterface
 
     /**
      * @param mixed $id
-     * @throws \HyperfExt\Jwt\Exceptions\UserNotDefinedException
+     * @throws \Hyperf\Jwt\Exceptions\UserNotDefinedException
      */
     public function loginUsingId($id)
     {
@@ -196,7 +196,7 @@ class JwtGuard implements StatelessGuardInterface
     }
 
     /**
-     * @throws \HyperfExt\Jwt\Exceptions\JwtException
+     * @throws \Hyperf\Jwt\Exceptions\JwtException
      */
     public function logout(bool $forceForever = false)
     {
@@ -211,7 +211,7 @@ class JwtGuard implements StatelessGuardInterface
     }
 
     /**
-     * @throws \HyperfExt\Jwt\Exceptions\JwtException
+     * @throws \Hyperf\Jwt\Exceptions\JwtException
      */
     public function refresh(bool $forceForever = false)
     {
@@ -219,7 +219,7 @@ class JwtGuard implements StatelessGuardInterface
     }
 
     /**
-     * @throws \HyperfExt\Jwt\Exceptions\JwtException
+     * @throws \Hyperf\Jwt\Exceptions\JwtException
      */
     public function invalidate(bool $forceForever = false)
     {
@@ -257,7 +257,7 @@ class JwtGuard implements StatelessGuardInterface
     /**
      * Get the raw Payload instance.
      *
-     * @throws \HyperfExt\Jwt\Exceptions\JwtException
+     * @throws \Hyperf\Jwt\Exceptions\JwtException
      */
     public function getPayload(): Payload
     {
@@ -267,7 +267,7 @@ class JwtGuard implements StatelessGuardInterface
     /**
      * Set the token.
      *
-     * @param \HyperfExt\Jwt\Token|string $token
+     * @param \Hyperf\Jwt\Token|string $token
      *
      * @return $this
      */
@@ -300,7 +300,7 @@ class JwtGuard implements StatelessGuardInterface
     /**
      * Get the last user we attempted to authenticate.
      *
-     * @return \HyperfExt\Auth\Contracts\AuthenticatableInterface
+     * @return \Hyperf\Auth\Contracts\AuthenticatableInterface
      */
     public function getLastAttempted()
     {
@@ -324,7 +324,7 @@ class JwtGuard implements StatelessGuardInterface
     /**
      * Ensure the JWTSubject matches what is in the token.
      *
-     * @throws \HyperfExt\Jwt\Exceptions\JwtException
+     * @throws \Hyperf\Jwt\Exceptions\JwtException
      */
     protected function validateSubject(): bool
     {
@@ -340,7 +340,7 @@ class JwtGuard implements StatelessGuardInterface
     /**
      * Ensure that a token is available in the request.
      *
-     * @throws \HyperfExt\Jwt\Exceptions\JwtException
+     * @throws \Hyperf\Jwt\Exceptions\JwtException
      */
     protected function requireToken(): Jwt
     {

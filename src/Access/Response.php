@@ -8,10 +8,10 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth\Access;
+namespace Hyperf\Auth\Access;
 
 use Hyperf\Utils\Contracts\Arrayable;
-use HyperfExt\Auth\Exceptions\AuthorizationException;
+use Hyperf\Auth\Exceptions\AuthorizationException;
 
 class Response implements Arrayable
 {
@@ -60,7 +60,7 @@ class Response implements Arrayable
      * Create a new "allow" Response.
      *
      * @param mixed $code
-     * @return \HyperfExt\Auth\Access\Response
+     * @return \Hyperf\Auth\Access\Response
      */
     public static function allow(?string $message = null, $code = null): Response
     {
@@ -71,7 +71,7 @@ class Response implements Arrayable
      * Create a new "deny" Response.
      *
      * @param mixed $code
-     * @return \HyperfExt\Auth\Access\Response
+     * @return \Hyperf\Auth\Access\Response
      */
     public static function deny(?string $message = null, $code = null): Response
     {
@@ -115,7 +115,7 @@ class Response implements Arrayable
     /**
      * Throw authorization exception if response was denied.
      *
-     *@throws \HyperfExt\Auth\Exceptions\AuthorizationException
+     *@throws \Hyperf\Auth\Exceptions\AuthorizationException
      * @return $this
      */
     public function authorize(): Response

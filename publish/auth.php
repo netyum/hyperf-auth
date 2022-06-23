@@ -42,13 +42,13 @@ return [
 
     'guards' => [
         'web' => [
-            'driver' => \HyperfExt\Auth\Guards\SessionGuard::class,
+            'driver' => \Hyperf\Auth\Guards\SessionGuard::class,
             'provider' => 'users',
             'options' => [],
         ],
 
         'api' => [
-            'driver' => \HyperfExt\Auth\Guards\JwtGuard::class,
+            'driver' => \Hyperf\Auth\Guards\JwtGuard::class,
             'provider' => 'users',
             'options' => [],
         ],
@@ -71,7 +71,7 @@ return [
 
     'providers' => [
         'users' => [
-            'driver' => \HyperfExt\Auth\UserProviders\ModelUserProvider::class,
+            'driver' => \Hyperf\Auth\UserProviders\ModelUserProvider::class,
             'options' => [
                 'model' => App\User::class,
                 'hash_driver' => 'bcrypt',
@@ -105,7 +105,7 @@ return [
 
     'passwords' => [
         'users' => [
-            'driver' => \HyperfExt\Auth\Passwords\DatabaseTokenRepository::class,
+            'driver' => \Hyperf\Auth\Passwords\DatabaseTokenRepository::class,
             'provider' => 'users',
             'options' => [
                 'connection' => null,

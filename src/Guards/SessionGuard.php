@@ -8,23 +8,23 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth\Guards;
+namespace Hyperf\Auth\Guards;
 
 use Hyperf\Contract\SessionInterface;
 use Hyperf\HttpMessage\Cookie\Cookie;
 use Hyperf\Utils\Str;
 use Hyperf\Utils\Traits\Macroable;
-use HyperfExt\Auth\Contracts\AuthenticatableInterface;
-use HyperfExt\Auth\Contracts\StatefulGuardInterface;
-use HyperfExt\Auth\Contracts\SupportsBasicAuthInterface;
-use HyperfExt\Auth\Contracts\UserProviderInterface;
-use HyperfExt\Auth\EventHelpers;
-use HyperfExt\Auth\Events\Logout;
-use HyperfExt\Auth\Exceptions\AuthenticationException;
-use HyperfExt\Auth\GuardHelpers;
-use HyperfExt\Auth\Recaller;
-use HyperfExt\Cookie\Contract\CookieJarInterface;
-use HyperfExt\Hashing\Hash;
+use Hyperf\Auth\Contracts\AuthenticatableInterface;
+use Hyperf\Auth\Contracts\StatefulGuardInterface;
+use Hyperf\Auth\Contracts\SupportsBasicAuthInterface;
+use Hyperf\Auth\Contracts\UserProviderInterface;
+use Hyperf\Auth\EventHelpers;
+use Hyperf\Auth\Events\Logout;
+use Hyperf\Auth\Exceptions\AuthenticationException;
+use Hyperf\Auth\GuardHelpers;
+use Hyperf\Auth\Recaller;
+use Hyperf\Cookie\Contract\CookieJarInterface;
+use Hyperf\Hashing\Hash;
 use Psr\EventDispatcher\EventDispatcherInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
@@ -46,7 +46,7 @@ class SessionGuard implements StatefulGuardInterface, SupportsBasicAuthInterface
     /**
      * The user we last attempted to retrieve.
      *
-     * @var \HyperfExt\Auth\Contracts\AuthenticatableInterface
+     * @var \Hyperf\Auth\Contracts\AuthenticatableInterface
      */
     protected $lastAttempted;
 
@@ -65,9 +65,9 @@ class SessionGuard implements StatefulGuardInterface, SupportsBasicAuthInterface
     protected $session;
 
     /**
-     * The HyperfExt cookie jar instance.
+     * The Hyperf cookie jar instance.
      *
-     * @var \HyperfExt\Cookie\CookieJar
+     * @var \Hyperf\Cookie\CookieJar
      */
     protected $cookieJar;
 
@@ -197,7 +197,7 @@ class SessionGuard implements StatefulGuardInterface, SupportsBasicAuthInterface
      *
      * @param mixed $id
      *
-     * @return false|\HyperfExt\Auth\Contracts\AuthenticatableInterface
+     * @return false|\Hyperf\Auth\Contracts\AuthenticatableInterface
      */
     public function onceUsingId($id)
     {
@@ -418,7 +418,7 @@ class SessionGuard implements StatefulGuardInterface, SupportsBasicAuthInterface
     /**
      * Get the cookie creator instance used by the guard.
      *
-     * @return \HyperfExt\Cookie\CookieJar
+     * @return \Hyperf\Cookie\CookieJar
      */
     public function getCookieJar(): CookieJarInterface
     {
@@ -438,7 +438,7 @@ class SessionGuard implements StatefulGuardInterface, SupportsBasicAuthInterface
     /**
      * Return the currently cached user.
      *
-     * @return null|\HyperfExt\Auth\Contracts\AuthenticatableInterface
+     * @return null|\Hyperf\Auth\Contracts\AuthenticatableInterface
      */
     public function getUser()
     {
@@ -499,7 +499,7 @@ class SessionGuard implements StatefulGuardInterface, SupportsBasicAuthInterface
     /**
      * Pull a user from the repository by its "remember me" cookie token.
      *
-     * @param \HyperfExt\Auth\Recaller $recaller
+     * @param \Hyperf\Auth\Recaller $recaller
      */
     protected function userFromRecaller($recaller): ?AuthenticatableInterface
     {
@@ -580,7 +580,7 @@ class SessionGuard implements StatefulGuardInterface, SupportsBasicAuthInterface
     /**
      * Get the response for basic authentication.
      *
-     * @throws \HyperfExt\Auth\Exceptions\AuthenticationException
+     * @throws \Hyperf\Auth\Exceptions\AuthenticationException
      */
     protected function failedBasicResponse(): void
     {

@@ -14,10 +14,10 @@ use Carbon\Carbon;
 use Hyperf\Database\ConnectionResolverInterface;
 use Hyperf\Database\Query\Builder;
 use Hyperf\DbConnection\Connection;
-use HyperfExt\Auth\Contracts\CanResetPasswordInterface;
-use HyperfExt\Auth\Passwords\DatabaseTokenRepository;
-use HyperfExt\Hashing\Contract\DriverInterface;
-use HyperfExt\Hashing\Contract\HashInterface;
+use Hyperf\Auth\Contracts\CanResetPasswordInterface;
+use Hyperf\Auth\Passwords\DatabaseTokenRepository;
+use Hyperf\Hashing\Contract\DriverInterface;
+use Hyperf\Hashing\Contract\HashInterface;
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
 

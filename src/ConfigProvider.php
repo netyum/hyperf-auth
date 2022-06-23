@@ -8,14 +8,14 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth;
+namespace Hyperf\Auth;
 
-use HyperfExt\Auth\Access\GateManager;
-use HyperfExt\Auth\Commands\GenAuthPolicyCommand;
-use HyperfExt\Auth\Contracts\Access\GateManagerInterface;
-use HyperfExt\Auth\Contracts\AuthManagerInterface;
-use HyperfExt\Auth\Contracts\PasswordBrokerManagerInterface;
-use HyperfExt\Auth\Passwords\PasswordBrokerManager;
+use Hyperf\Auth\Access\GateManager;
+use Hyperf\Auth\Commands\GenAuthPolicyCommand;
+use Hyperf\Auth\Contracts\Access\GateManagerInterface;
+use Hyperf\Auth\Contracts\AuthManagerInterface;
+use Hyperf\Auth\Contracts\PasswordBrokerManagerInterface;
+use Hyperf\Auth\Passwords\PasswordBrokerManager;
 
 class ConfigProvider
 {

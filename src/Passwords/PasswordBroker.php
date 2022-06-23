@@ -8,14 +8,14 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth\Passwords;
+namespace Hyperf\Auth\Passwords;
 
 use Closure;
 use Hyperf\Utils\Arr;
-use HyperfExt\Auth\Contracts\CanResetPasswordInterface;
-use HyperfExt\Auth\Contracts\PasswordBrokerInterface;
-use HyperfExt\Auth\Contracts\TokenRepositoryInterface;
-use HyperfExt\Auth\Contracts\UserProviderInterface;
+use Hyperf\Auth\Contracts\CanResetPasswordInterface;
+use Hyperf\Auth\Contracts\PasswordBrokerInterface;
+use Hyperf\Auth\Contracts\TokenRepositoryInterface;
+use Hyperf\Auth\Contracts\UserProviderInterface;
 use UnexpectedValueException;
 
 class PasswordBroker implements PasswordBrokerInterface
@@ -23,14 +23,14 @@ class PasswordBroker implements PasswordBrokerInterface
     /**
      * The password token repository.
      *
-     * @var \HyperfExt\Auth\Contracts\TokenRepositoryInterface
+     * @var \Hyperf\Auth\Contracts\TokenRepositoryInterface
      */
     protected $tokens;
 
     /**
      * The user provider implementation.
      *
-     * @var \HyperfExt\Auth\Contracts\UserProviderInterface
+     * @var \Hyperf\Auth\Contracts\UserProviderInterface
      */
     protected $users;
 
@@ -152,7 +152,7 @@ class PasswordBroker implements PasswordBrokerInterface
     /**
      * Validate a password reset for the given credentials.
      *
-     * @return \HyperfExt\Auth\Contracts\CanResetPasswordInterface|string
+     * @return \Hyperf\Auth\Contracts\CanResetPasswordInterface|string
      */
     protected function validateReset(array $credentials)
     {

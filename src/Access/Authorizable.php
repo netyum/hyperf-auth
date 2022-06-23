@@ -8,10 +8,10 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth\Access;
+namespace Hyperf\Auth\Access;
 
 use Hyperf\Utils\ApplicationContext;
-use HyperfExt\Auth\Contracts\Access\GateManagerInterface;
+use Hyperf\Auth\Contracts\Access\GateManagerInterface;
 
 trait Authorizable
 {

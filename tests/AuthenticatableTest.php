@@ -10,8 +10,8 @@ declare(strict_types=1);
  */
 namespace HyperfTest;
 
-use HyperfExt\Auth\Authenticatable;
-use HyperfExt\Auth\Contracts\AuthenticatableInterface;
+use Hyperf\Auth\Authenticatable;
+use Hyperf\Auth\Contracts\AuthenticatableInterface;
 use PHPUnit\Framework\TestCase;
 
 /**

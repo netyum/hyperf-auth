@@ -11,12 +11,12 @@ declare(strict_types=1);
 namespace HyperfTest;
 
 use Hyperf\Utils\Arr;
-use HyperfExt\Auth\Contracts\AuthenticatableInterface;
-use HyperfExt\Auth\Contracts\CanResetPasswordInterface;
-use HyperfExt\Auth\Contracts\PasswordBrokerInterface;
-use HyperfExt\Auth\Contracts\TokenRepositoryInterface;
-use HyperfExt\Auth\Contracts\UserProviderInterface;
-use HyperfExt\Auth\Passwords\PasswordBroker;
+use Hyperf\Auth\Contracts\AuthenticatableInterface;
+use Hyperf\Auth\Contracts\CanResetPasswordInterface;
+use Hyperf\Auth\Contracts\PasswordBrokerInterface;
+use Hyperf\Auth\Contracts\TokenRepositoryInterface;
+use Hyperf\Auth\Contracts\UserProviderInterface;
+use Hyperf\Auth\Passwords\PasswordBroker;
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
 use UnexpectedValueException;

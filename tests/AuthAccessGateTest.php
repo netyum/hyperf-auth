@@ -11,11 +11,11 @@ declare(strict_types=1);
 namespace HyperfTest;
 
 use Hyperf\Utils\ApplicationContext;
-use HyperfExt\Auth\Access\Gate;
-use HyperfExt\Auth\Access\HandlesAuthorization;
-use HyperfExt\Auth\Access\Response;
-use HyperfExt\Auth\Contracts\AuthenticatableInterface;
-use HyperfExt\Auth\Exceptions\AuthorizationException;
+use Hyperf\Auth\Access\Gate;
+use Hyperf\Auth\Access\HandlesAuthorization;
+use Hyperf\Auth\Access\Response;
+use Hyperf\Auth\Contracts\AuthenticatableInterface;
+use Hyperf\Auth\Exceptions\AuthorizationException;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 use stdClass;

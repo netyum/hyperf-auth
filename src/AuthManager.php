@@ -8,14 +8,14 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth;
+namespace Hyperf\Auth;
 
 use Closure;
 use Hyperf\Contract\ConfigInterface;
-use HyperfExt\Auth\Contracts\AuthManagerInterface;
-use HyperfExt\Auth\Contracts\GuardInterface;
-use HyperfExt\Auth\Contracts\UserProviderInterface;
-use HyperfExt\Auth\Events\AuthManagerResolved;
+use Hyperf\Auth\Contracts\AuthManagerInterface;
+use Hyperf\Auth\Contracts\GuardInterface;
+use Hyperf\Auth\Contracts\UserProviderInterface;
+use Hyperf\Auth\Events\AuthManagerResolved;
 use InvalidArgumentException;
 use Psr\Container\ContainerInterface;
 use Psr\EventDispatcher\EventDispatcherInterface;
@@ -61,7 +61,7 @@ class AuthManager implements AuthManagerInterface
     /**
      * Attempt to get the guard from the local cache.
      *
-     * @return \HyperfExt\Auth\Contracts\GuardInterface|\HyperfExt\Auth\Contracts\StatefulGuardInterface
+     * @return \Hyperf\Auth\Contracts\GuardInterface|\Hyperf\Auth\Contracts\StatefulGuardInterface
      */
     public function guard(?string $name = null): GuardInterface
     {
@@ -151,7 +151,7 @@ class AuthManager implements AuthManagerInterface
      * Resolve the given guard.
      *
      *@throws \InvalidArgumentException
-     * @return \HyperfExt\Auth\Contracts\GuardInterface|\HyperfExt\Auth\Contracts\StatefulGuardInterface
+     * @return \Hyperf\Auth\Contracts\GuardInterface|\Hyperf\Auth\Contracts\StatefulGuardInterface
      */
     protected function resolve(string $name)
     {

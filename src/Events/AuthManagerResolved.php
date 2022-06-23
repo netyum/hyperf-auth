@@ -8,14 +8,14 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth\Events;
+namespace Hyperf\Auth\Events;
 
-use HyperfExt\Auth\Contracts\AuthManagerInterface;
+use Hyperf\Auth\Contracts\AuthManagerInterface;
 
 class AuthManagerResolved
 {
     /**
-     * @var \HyperfExt\Auth\Contracts\AuthManagerInterface
+     * @var \Hyperf\Auth\Contracts\AuthManagerInterface
      */
     public $auth;
 

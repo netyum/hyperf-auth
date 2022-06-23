@@ -8,18 +8,18 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth\Passwords;
+namespace Hyperf\Auth\Passwords;
 
 use Hyperf\Contract\ConfigInterface;
-use HyperfExt\Auth\Contracts\AuthManagerInterface;
-use HyperfExt\Auth\Contracts\PasswordBrokerInterface;
-use HyperfExt\Auth\Contracts\PasswordBrokerManagerInterface;
-use HyperfExt\Auth\Contracts\TokenRepositoryInterface;
+use Hyperf\Auth\Contracts\AuthManagerInterface;
+use Hyperf\Auth\Contracts\PasswordBrokerInterface;
+use Hyperf\Auth\Contracts\PasswordBrokerManagerInterface;
+use Hyperf\Auth\Contracts\TokenRepositoryInterface;
 use InvalidArgumentException;
 use Psr\Container\ContainerInterface;
 
 /**
- * @mixin \HyperfExt\Auth\Contracts\PasswordBrokerInterface
+ * @mixin \Hyperf\Auth\Contracts\PasswordBrokerInterface
  * @method string sendResetLink(array $credentials)
  * @method mixed reset(array $credentials, \Closure $callback)
  */
@@ -42,7 +42,7 @@ class PasswordBrokerManager implements PasswordBrokerManagerInterface
     /**
      * The auth manager instance.
      *
-     * @var \HyperfExt\Auth\Contracts\AuthManagerInterface
+     * @var \Hyperf\Auth\Contracts\AuthManagerInterface
      */
     protected $auth;
 

@@ -10,8 +10,8 @@ declare(strict_types=1);
  */
 namespace HyperfTest;
 
-use HyperfExt\Auth\Access\Response;
-use HyperfExt\Auth\Exceptions\AuthorizationException;
+use Hyperf\Auth\Access\Response;
+use Hyperf\Auth\Exceptions\AuthorizationException;
 use PHPUnit\Framework\TestCase;
 
 /**

@@ -8,16 +8,16 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth\Events;
+namespace Hyperf\Auth\Events;
 
-use HyperfExt\Auth\Contracts\MustVerifyEmail;
+use Hyperf\Auth\Contracts\MustVerifyEmail;
 
 class Verified
 {
     /**
      * The verified user.
      *
-     * @var \HyperfExt\Auth\Contracts\MustVerifyEmail
+     * @var \Hyperf\Auth\Contracts\MustVerifyEmail
      */
     public $user;
 

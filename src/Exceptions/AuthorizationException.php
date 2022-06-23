@@ -8,10 +8,10 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth\Exceptions;
+namespace Hyperf\Auth\Exceptions;
 
 use Exception;
-use HyperfExt\Auth\Access\Response;
+use Hyperf\Auth\Access\Response;
 use Throwable;
 
 class AuthorizationException extends Exception
@@ -19,7 +19,7 @@ class AuthorizationException extends Exception
     /**
      * The response from the gate.
      *
-     * @var \HyperfExt\Auth\Access\Response
+     * @var \Hyperf\Auth\Access\Response
      */
     protected $response;
 

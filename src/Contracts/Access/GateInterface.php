@@ -8,10 +8,10 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth\Contracts\Access;
+namespace Hyperf\Auth\Contracts\Access;
 
-use HyperfExt\Auth\Access\Response;
-use HyperfExt\Auth\Contracts\AuthenticatableInterface;
+use Hyperf\Auth\Access\Response;
+use Hyperf\Auth\Contracts\AuthenticatableInterface;
 
 interface GateInterface
 {
@@ -102,7 +102,7 @@ interface GateInterface
      *
      * @param array|mixed $arguments
      *
-     * @throws \HyperfExt\Auth\Exceptions\AuthorizationException
+     * @throws \Hyperf\Auth\Exceptions\AuthorizationException
      */
     public function authorize(string $ability, $arguments = []): Response;
 
@@ -118,8 +118,8 @@ interface GateInterface
      *
      * @param array|mixed $arguments
      *
-     *@throws \HyperfExt\Auth\Exceptions\AuthorizationException
-     * @return null|bool|\HyperfExt\Auth\Access\Response
+     *@throws \Hyperf\Auth\Exceptions\AuthorizationException
+     * @return null|bool|\Hyperf\Auth\Access\Response
      */
     public function raw(string $ability, $arguments = []);
 

@@ -8,15 +8,15 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/auth/blob/master/LICENSE
  */
-namespace HyperfExt\Auth\Access;
+namespace Hyperf\Auth\Access;
 
 use Exception;
 use Hyperf\Contract\ContainerInterface;
 use Hyperf\Utils\Arr;
 use Hyperf\Utils\Str;
-use HyperfExt\Auth\Contracts\Access\GateInterface;
-use HyperfExt\Auth\Contracts\AuthenticatableInterface;
-use HyperfExt\Auth\Exceptions\AuthorizationException;
+use Hyperf\Auth\Contracts\Access\GateInterface;
+use Hyperf\Auth\Contracts\AuthenticatableInterface;
+use Hyperf\Auth\Exceptions\AuthorizationException;
 use InvalidArgumentException;
 use ReflectionClass;
 use ReflectionFunction;
@@ -267,8 +267,8 @@ class Gate implements GateInterface
      *
      * @param array|mixed $arguments
      *
-     *@throws \HyperfExt\Auth\Exceptions\AuthorizationException
-     * @return \HyperfExt\Auth\Access\Response
+     *@throws \Hyperf\Auth\Exceptions\AuthorizationException
+     * @return \Hyperf\Auth\Access\Response
      */
     public function authorize(string $ability, $arguments = []): Response
     {
@@ -280,7 +280,7 @@ class Gate implements GateInterface
      *
      * @param array|mixed $arguments
      *
-     * @return \HyperfExt\Auth\Access\Response
+     * @return \Hyperf\Auth\Access\Response
      */
     public function inspect(string $ability, $arguments = []): Response
     {
@@ -302,8 +302,8 @@ class Gate implements GateInterface
      *
      * @param array|mixed $arguments
      *
-     *@throws \HyperfExt\Auth\Exceptions\AuthorizationException
-     * @return null|bool|\HyperfExt\Auth\Access\Response
+     *@throws \Hyperf\Auth\Exceptions\AuthorizationException
+     * @return null|bool|\Hyperf\Auth\Access\Response
      */
     public function raw(string $ability, $arguments = [])
     {
@@ -541,7 +541,7 @@ class Gate implements GateInterface
      * Resolve and call the appropriate authorization callback.
      *
      * @throws \ReflectionException
-     * @return bool|\HyperfExt\Auth\Access\Response
+     * @return bool|\Hyperf\Auth\Access\Response
      */
     protected function callAuthCallback(?AuthenticatableInterface $user, string $ability, array $arguments)
     {
@@ -554,7 +554,7 @@ class Gate implements GateInterface
      * Call all of the before callbacks and return if a result is given.
      *
      * @throws \ReflectionException
-     * @return null|bool|\HyperfExt\Auth\Access\Response
+     * @return null|bool|\Hyperf\Auth\Access\Response
      */
     protected function callBeforeCallbacks(?AuthenticatableInterface $user, string $ability, array $arguments)
     {
@@ -573,10 +573,10 @@ class Gate implements GateInterface
     /**
      * Call all of the after callbacks with check result.
      *
-     * @param null|bool|\HyperfExt\Auth\Access\Response $result
+     * @param null|bool|\Hyperf\Auth\Access\Response $result
      *
      * @throws \ReflectionException
-     * @return null|bool|\HyperfExt\Auth\Access\Response
+     * @return null|bool|\Hyperf\Auth\Access\Response
      */
     protected function callAfterCallbacks(?AuthenticatableInterface $user, string $ability, array $arguments, $result)
     {
